@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import '../../styles/login.scss'
 
 const Login = () => {
@@ -20,13 +21,13 @@ const Login = () => {
 
                 <div className="flex-row">
                     <div>
-                        <input type="radio" />
+                        <input type="checkbox" className='mr-1' />
                         <label>Remember me </label>
                     </div>
-                    <span className="span">Forgot password?</span>
+                    <Link to={"/forgot-password"} className="span">Forgot password?</Link>
                 </div>
-                <button className="button-submit">Sign In</button>
-                <p className="p">Don't have an account? <span className="span">Sign Up</span>
+                <button className="button-submit">Login</button>
+                <p className="p">Don't have an account? <Link to={'/register'} className="span">Register</Link>
 
                 </p>
             </form>
